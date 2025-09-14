@@ -1,0 +1,14 @@
+{
+    "9876543210": {
+        "username": "TestUser",
+        "email": "test@example.com",
+        "aadhaar": "123412341234",
+        "password": "test123"
+    },
+    "1234567890": {
+        "username": "kiran",
+        "email": "kiran@gmail.com",
+        "aadhaar": "123456789012",
+        "password": "123"
+    }
+}

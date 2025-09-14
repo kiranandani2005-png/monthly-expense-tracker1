@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Admin Dashboard</h2>
+    <p><a href="{{ url_for('admin_logout') }}">Logout</a></p>
+
+    <h3>Users</h3>
+    <table>
+      <tr>
+        <th>Phone</th><th>Username</th><th>Email</th><th>Aadhaar</th><th>Action</th>
+      </tr>
+      {% for phone, user in users.items() %}
+      <tr>
+        <td>{{ phone }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.aadhaar }}</td>
+        <td><a href="{{ url_for('delete_user', phone=phone) }}">Delete</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h3>Transactions</h3>
+    {% for phone, txns in transactions.items() %}
+      <h4>{{ users[phone].username }} ({{ phone }})</h4>
+      <table>
+        <tr><th>Date</th><th>Time</th><th>Type</th><th>Amount</th><th>Note</th></tr>
+        {% for t in txns %}
+        <tr>
+          <td>{{ t.date }}</td>
+          <td>{{ t.time }}</td>
+          <td>{{ t.type }}</td>
+          <td>{{ t.amount }}</td>
+          <td>{{ t.note }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    {% endfor %}
+  </div>
+</body>
+</html>

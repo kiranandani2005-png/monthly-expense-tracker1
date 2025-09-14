@@ -1,0 +1,51 @@
+{
+    "9876543210": [
+        {
+            "type": "income",
+            "amount": 10000,
+            "note": "Salary",
+            "date": "2025-09-01",
+            "time": "10:00:00",
+            "month": "September",
+            "year": 2025
+        },
+        {
+            "type": "expense",
+            "amount": 2000,
+            "note": "Groceries",
+            "date": "2025-09-02",
+            "time": "14:30:00",
+            "month": "September",
+            "year": 2025
+        }
+    ],
+    "1234567890": [
+        {
+            "type": "income",
+            "amount": 1000.0,
+            "note": "food",
+            "date": "2025-09-14",
+            "time": "22:58:57",
+            "month": "September",
+            "year": 2025
+        },
+        {
+            "type": "expense",
+            "amount": 200.0,
+            "note": "friend",
+            "date": "2025-09-14",
+            "time": "22:59:36",
+            "month": "September",
+            "year": 2025
+        },
+        {
+            "type": "income",
+            "amount": 1000.0,
+            "note": "home",
+            "date": "2025-09-14",
+            "time": "23:39:43",
+            "month": "September",
+            "year": 2025
+        }
+    ]
+}

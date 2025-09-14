@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Graphs - {{ username }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Graphs - {{ username }}</h2>
+
+    <div>
+      <label for="graphType">Select Graph:</label>
+      <select id="graphType">
+        <option value="bar">Bar</option>
+        <option value="line">Line</option>
+        <option value="pie">Pie</option>
+      </select>
+
+      <label for="timeFrame">Time Frame:</label>
+      <select id="timeFrame">
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+        <option value="yearly">Yearly</option>
+      </select>
+
+      <button onclick="updateGraph()">Show Graph</button>
+    </div>
+
+    <canvas id="chartCanvas" width="800" height="400"></canvas>
+
+    <div id="comparison">
+      <h3>Profit / Loss Comparison</h3>
+      <p id="status"></p>
+    </div>
+
+    <p><a href="{{ url_for('dashboard') }}">Back to Dashboard</a></p>
+  </div>
+</body>
+</html>
